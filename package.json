@@ -1,7 +1,14 @@
 {
   "name": "browsermob-proxy",
   "description": "Javascript bindings for the browsermob-proxy",
-  "keywords": ["selenium", "test", "testing", "proxy", "tests", "har"],
+  "keywords": [
+    "selenium",
+    "test",
+    "testing",
+    "proxy",
+    "tests",
+    "har"
+  ],
   "version": "1.0.8",
   "author": "Mark Ethan Trostler <mark@zzo.com>",
   "repository": {
@@ -10,9 +17,14 @@
   },
   "homepage": "https://github.com/zzo/browsermob-node",
   "main": "./browsermob.js",
-  "dependencies" :
-    {
-      "webdriverio" : ""
-  }
+  "dependencies": {
+    "webdriverio": "",
+    "snyk": "^1.316.1"
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
 
